@@ -21,7 +21,7 @@ export default function Footer() {
             </div>
             </Link>
             <a
-              href={`https://github.com/collinsrs`}
+              href={`https://github.com/collinsrs/CollinsForPomfret-Website`}
               className="mx-3 font-bold hover:underline"
             >
               This site is open source. View my code here.
