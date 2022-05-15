@@ -1,0 +1,51 @@
+{
+  "id": "d2d81600-122c-494c-a469-751e705e88bd",
+  "uid": "occaecati-deserunt-laudantium",
+  "type": "post",
+  "data": {
+    "content": [
+      {
+        "type": "heading1",
+        "text": "Redefine cutting-edge infrastructures",
+        "spans": []
+      },
+      {
+        "type": "image",
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8?w=900&h=500&fit=crop"
+      },
+      {
+        "type": "paragraph",
+        "text": "Magna Lorem non et consequat adipisicing incididunt est sint labore do do sit. Incididunt sint enim reprehenderit elit reprehenderit.",
+        "spans": []
+      }
+    ],
+    "date": "2018-02-10",
+    "coverimage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+    },
+    "author": {
+      "link_type": "Web",
+      "url": "https://slicemachine.dev"
+    },
+    "excerpt": "embrace B2B models",
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Ad consectetur est consectetur laborum commodo aute minim quis culpa culpa tempor. Elit proident deserunt dolor mollit id minim eu eu deserunt sit.",
+        "spans": []
+      }
+    ]
+  }
+}

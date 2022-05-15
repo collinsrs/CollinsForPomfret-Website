@@ -14,7 +14,8 @@ export default function Index({ preview, allPosts }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Collins 2022- For Pomfret School President</title>
+          <meta property="description" content="Vote Rishi Collins for Pomfret School President! View campaign information, about me, and share your thoughts." />
         </Head>
         <Container>
           <Intro />
