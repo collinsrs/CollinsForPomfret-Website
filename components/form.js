@@ -28,7 +28,7 @@ export default function ContactForm() {
           if (message === "" ) {
               alert("Message not sent. Message field was left blank. Please try again.");
             } else {
-                emailjs.sendForm(process.env.EJS_SERVICE, 'template_g2xfwfd', form.current, process.env.EJS_PUBLIC_KEY)
+                emailjs.sendForm('service_z5rzdqx', 'template_g2xfwfd', form.current, 'lSmh6d1DzMROl9CYh')
                 .then((result) => {
                     console.log(result.text);
                     alert("Your message has been sent!");
