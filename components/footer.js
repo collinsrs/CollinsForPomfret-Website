@@ -21,12 +21,20 @@ export default function Footer() {
             </div>
             </Link>
             <a
-              href={`https://github.com/collinsrs/CollinsForPomfret-Website`}
+              href={``}
               className="mx-3 font-bold hover:underline"
             >
-              This site is open source. View my code here.
+              View source code on GitHub
             </a>
           </div>
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+            <Link href='/#contact'>
+              <span className="mx-3 font-bold hover:underline">
+                Contact me
+              </span>
+            </Link>
+            </div>
+            <span className="text-base text-gray-500 block mt-8">© {new Date().getFullYear()} | web design and content by me. powered by Next.js and Vercel.</span>
         </div>
       </Container>
     </footer>

@@ -5,6 +5,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import { getAllPostsForHome } from '../lib/api'
 import Head from 'next/head'
+import ContactForm from '../components/form'
 import { CMS_NAME } from '../lib/constants'
 
 export default function Index({ preview, allPosts }) {
@@ -30,6 +31,7 @@ export default function Index({ preview, allPosts }) {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <ContactForm />
         </Container>
       </Layout>
     </>
