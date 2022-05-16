@@ -24,16 +24,21 @@ export default function ContactForm() {
       
         const sendEmail = (e) => {
           e.preventDefault();
+
+          if (message === "" ) {
+              alert("Message not sent. Message field was left blank. Please try again.");
+            } else {
+                emailjs.sendForm('service_z5rzdqx', 'template_g2xfwfd', form.current, 'lSmh6d1DzMROl9CYh')
+                .then((result) => {
+                    console.log(result.text);
+                    alert("Your message has been sent!");
+                }, (error) => {
+                    console.log(error.text);
+                    alert("An error occured and your message could not be sent. Please try again later.");
+                });
+            };
+          }
       
-          emailjs.sendForm('service_z5rzdqx', 'template_g2xfwfd', form.current, 'lSmh6d1DzMROl9CYh')
-            .then((result) => {
-                console.log(result.text);
-                alert("Your message has been sent!");
-            }, (error) => {
-                console.log(error.text);
-                alert("Your message could not be sent. Please try again later.");
-            });
-        };
 
         return (
             <div id="contact" className="flex flex-col items-center justify-center">
@@ -62,7 +67,7 @@ export default function ContactForm() {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-password">
                                 Message
                             </label>
-                            <textarea value={message} onChange={onChangeMessage} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="message" id="grid-password" type="text" placeholder="Required." />
+                            <textarea required value={message} onChange={onChangeMessage} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="message" id="grid-password" type="text" placeholder="Required." />
                         </div>
                     </div>
                     <div className="flex items-center justify-between">
