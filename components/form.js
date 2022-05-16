@@ -39,7 +39,7 @@ export default function ContactForm() {
             <div id="contact" className="flex flex-col items-center justify-center">
                 <hr className="w-full my-8" />
                 <h1 className="text-4xl font-bold text-center">I want to hear from YOU!</h1>
-                <p className="text-center">Have a question? A commment? An idea? I want to hear them! <br /> Write your thoughts below, and they'll get sent to me. Providing your name and email is optional, if you prefer to remain anoynmous.</p>
+                <p className="text-center">Have a question? A commment? An idea? I want to hear them! Write your thoughts below, and they'll get sent to me. Providing your name and email is optional, if you prefer to remain anoynmous.</p>
                 <form ref={form} className="w-full max-w-lg">
                     <div className="flex flex-wrap -mx-3 mb-6">
                         <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
