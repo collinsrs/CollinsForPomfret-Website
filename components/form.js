@@ -26,7 +26,6 @@ export default function ContactForm() {
       
         const sendEmail = (e) => {
           e.preventDefault();
-          recaptchaRef.current.execute();
 
           if (message === "" ) {
               alert("Message not sent. Message field was left blank. Please try again.");
