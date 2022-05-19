@@ -25,7 +25,9 @@ export default function Alert({ preview }) {
             </>
           ) : (
             <>
-          
+              <p>
+                This campaign has now ended. Thank you for your support. This site will remain for viewing purposes.
+              </p>
             </>
           )}
         </div>

@@ -1,9 +1,11 @@
 import React, { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+
+
 
 export default function ContactForm() {
         const form = useRef();
         const [name, setName] = useState("");
+        const [disabled, setDisabled] = useState(true);
         const [email, setEmail] = useState("");
         const [message, setMessage] = useState("");
 
@@ -24,19 +26,13 @@ export default function ContactForm() {
       
         const sendEmail = (e) => {
           e.preventDefault();
+          recaptchaRef.current.execute();
 
           if (message === "" ) {
               alert("Message not sent. Message field was left blank. Please try again.");
             } else {
-                emailjs.sendForm('service_z5rzdqx', 'template_g2xfwfd', form.current, 'lSmh6d1DzMROl9CYh')
-                .then((result) => {
-                    console.log(result.text);
-                    alert("Your message has been sent!");
-                }, (error) => {
-                    console.log(error.text);
-                    alert("An error occured and your message could not be sent. Please try again later.");
-                });
-            };
+            alert("This service has been disabled, following the end of this campaign.");
+            }
           }
       
 
@@ -71,9 +67,15 @@ export default function ContactForm() {
                         </div>
                     </div>
                     <div className="flex items-center justify-between">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={sendEmail}>
+                        <button disabled={disabled} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onClick={sendEmail}>
                             Send Message
                         </button>
+                        <ReCAPTCHA
+	                ref={recaptchaRef}
+	                size="invisible"
+	                sitekey={sk}
+                    onChange={onReCAPTCHAChange}
+	                />
                     </div>
                 </form>
                 <hr className="my-8" />
